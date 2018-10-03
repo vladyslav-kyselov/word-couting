@@ -1,41 +1,11 @@
-<html>
-<head>
-<title>калькулятор выплат по ссуде на JavaScript</title>	
-<style type="text/css">
-	
-	#input, #result{
-		margin-top:30px;
-		margin-left: 30px;
-	}
-
-	.button{
-		margin-left: 30px;
-		background: grey;
-		color: white;
-	}
-
-</style>
-</head>
-<body>
-
-	<input type="text" placeholder="Введите несколько слов" id="input" onkeyup="this.value=this.value.replace(/\s+/gi, ' ')" onkeydown="return specialText(this, event)"></input>	
-	<br>
-	<br>
-	<button class="button" onclick="out()">Посчитать</button>
-	<br>
- 	<p id="result"></p>
-	
-<script>
 
 function specialText(element, event) //функция, которая запрещает нажатие клавиш 0-9
 {
-    if (
-      event.keyCode == 48 ||  event.keyCode == 49 || event.keyCode == 50 ||  event.keyCode == 51 ||  event.keyCode == 52 ||  event.keyCode == 53 || event.keyCode == 54 || event.keyCode == 55 || event.keyCode == 56 ||event.keyCode == 57 ||  event.keyCode == 51 ) {
-    	return false;
-    }
+	    if (
+	      event.keyCode == 48 ||  event.keyCode == 49 || event.keyCode == 50 ||  event.keyCode == 51 ||  event.keyCode == 52 ||  event.keyCode == 53 || event.keyCode == 54 || event.keyCode == 55 || event.keyCode == 56 ||event.keyCode == 57 ||  event.keyCode == 51 ) {
+	    	return false;
+	    }
 }
-
-
 
 
 	function out() {
@@ -70,10 +40,3 @@ function specialText(element, event) //функция, которая запре
 
 	document.getElementById('result').innerHTML = 'В этой строке '+ number_of_words + ' слова';
 }
-	
-</script>
-
-</body>
-</html>
-
-	
