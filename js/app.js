@@ -1,11 +1,11 @@
 
-function specialText(element, event) //функция, которая запрещает нажатие клавиш 0-9
-{
-	    if (
-	      event.keyCode == 48 ||  event.keyCode == 49 || event.keyCode == 50 ||  event.keyCode == 51 ||  event.keyCode == 52 ||  event.keyCode == 53 || event.keyCode == 54 || event.keyCode == 55 || event.keyCode == 56 ||event.keyCode == 57 ||  event.keyCode == 51 ) {
-	    	return false;
-	    }
-}
+//function specialText(element, event) //функция, которая запрещает нажатие клавиш 0-9
+//{
+	//    if (
+	  //    event.keyCode == 48 ||  event.keyCode == 49 || event.keyCode == 50 ||  event.keyCode == 51 ||  event.keyCode == 52 ||  event.keyCode == 53 || event.keyCode == 54 || event.keyCode == 55 || event.keyCode == 56 ||event.keyCode == 57 ||  event.keyCode == 51 ) {
+	    //	return false;
+	    //}
+//}
 
 
 	function out() {
@@ -14,11 +14,15 @@ function specialText(element, event) //функция, которая запре
 	
 	
 		var number_of_words=1;
-	for (var i =0; i <= line.length ; i++) {   //основной цикл , от 0 до всей длинны строки
-   var proverka = line.charAt(line.length-i);
+	for (var i =0; i <= line.length; i++) {   //основной цикл , от 0 до всей длинны строки
+   var test = line.charAt(line.length-i);
    	
-	 if (proverka==" ") {                                //если встречается пробел, то делаем +1
+	 if (test==" ") {                                //если встречается пробел, то делаем +1
 		number_of_words=number_of_words+1;
+		}
+
+		if (test=="!"){
+			if (test==" ") {number_of_words=number_of_words-1;}
 		}
 	}
 
@@ -35,6 +39,8 @@ function specialText(element, event) //функция, которая запре
 		if (line.length==0){
 			number_of_words=0;
 		}
+
+		
 
 	
 

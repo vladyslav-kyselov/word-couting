@@ -6,7 +6,9 @@
 </head>
 <body>
 
-	<input type="text" placeholder="Введите несколько слов" id="input" onkeyup="this.value=this.value.replace(/\s+/gi, ' ')" onkeydown="return specialText(this, event)"></input>	
+	<input type="text" placeholder="Введите несколько слов" id="input" onkeyup="this.value = this.value.replace(/[^A-Za-zА-Яа-яЁё\s]/g, '').replace(/\s+/gi, ' ');"> 
+		
+	</input>	
 	<br>
 	<br>
 	<button class="button" onclick="out()">Посчитать</button>
