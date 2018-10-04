@@ -1,22 +1,23 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<title>калькулятор выплат по ссуде на JavaScript</title>	
-<link rel="stylesheet" type="text/css" href="styles/style.css">
-<script src="js/app.js"></script>
+    <title>калькулятор выплат по ссуде на JavaScript</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="js/app.js"></script>
 </head>
 <body>
 
-	<input type="text" placeholder="Введите несколько слов" id="input" onkeyup="this.value = this.value.replace(/[^A-Za-zА-Яа-яЁё\s]/g, '').replace(/\s+/gi, ' ');"> 
-		
-	</input>	
-	<br>
-	<br>
-	<button class="button" onclick="out()">Посчитать</button>
-	<br>
- 	<p id="result"></p>
-	
+<input type="text" placeholder="Введите несколько слов" id="input"
+       onkeyup="this.value = this.value.replace(/[^A-Za-zА-Яа-яЁё\s]/g, '').replace(/\s+/gi, ' ');">
+
+</input>
+<br>
+<br>
+<button class="button" onclick="out()">Посчитать</button>
+<br>
+<p id="result"></p>
+
 
 </body>
 </html>
-
-	
