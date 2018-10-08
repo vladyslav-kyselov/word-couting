@@ -4,20 +4,16 @@
     <title>калькулятор выплат по ссуде на JavaScript</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <script src="js/app.js"></script>
 </head>
 <body>
 
-<input type="text" placeholder="Введите несколько слов" id="input"
-       onkeyup="this.value = this.value.replace(/[^A-Za-zА-Яа-яЁё\s]/g, '').replace(/\s+/gi, ' ');">
+<input type="text" placeholder="Введите несколько слов" id="input">
 
 </input>
-<br>
-<br>
-<button class="button" onclick="out()">Посчитать</button>
-<br>
+<button class="button" id="click-me">Посчитать</button>
 <p id="result"></p>
 
 
+<script src="js/app.js"></script>
 </body>
 </html>
