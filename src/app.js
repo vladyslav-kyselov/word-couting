@@ -1,33 +1,31 @@
 document.addEventListener('DOMContentLoaded', buttonClick);
 
 function buttonClick() {
-  document.getElementById('button-click').addEventListener('click', out);
+  document.getElementById('button-click').addEventListener('click', onCalculcateWordsButtonClick);
 }
 
-function out() {
+function onCalculcateWordsButtonClick() {
   let line = document.getElementById('input').value;
   line = line.replace(/[^A-Za-zА-Яа-яЁё\s]/g, '').replace(/\s+/gi, ' ');
-  let NumberOfWords = 1;
+  let NumberOfWords = 0;
   for (let i = 0; i <= line.length; i++) {
-    let test = line.charAt(line.length - i);
-
+    let test = line.charAt(line.length-i);
     if (test == ' ') {
-      NumberOfWords = NumberOfWords + 1;
+      NumberOfWords++;
     }
   }
-
+  let firstNoSpace = line.charAt(line.length[0]);
   let LineLastWord = line.charAt(line.length - 1);
   if ( LineLastWord == ' ') {
-    NumberOfWords = NumberOfWords - 1;
+    NumberOfWords--;
   }
-
-  let LineFirstWord = line.charAt(line.length[0]);
-  if ( LineFirstWord == ' ') {
-    NumberOfWords = NumberOfWords - 1;
+  if (line.length[0] == ' ') {
+    NumberOfWords--;
   }
-
   if (line.length == 0) {
-    NumberOfWords = 0;
+    NumberOfWords= 0;
+  } else if (firstNoSpace != ' ') {
+    NumberOfWords++;
   }
 
   document.getElementById('result').innerHTML = 'В этой строке ' + NumberOfWords + ' слова';
