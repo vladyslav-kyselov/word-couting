@@ -1,4 +1,8 @@
-document.getElementById('click-me').addEventListener('click', out);
+document.addEventListener('DOMContentLoaded', buttonClick);
+
+function buttonClick() {
+  document.getElementById('button-click').addEventListener('click', out);
+}
 
 function out() {
   let line = document.getElementById('input').value;
