@@ -7,12 +7,9 @@ function buttonClick() {
 function getWords(str) {
   let NumberOfWords = 0;
   for (let i = 0; i < str.length; i++) {
-    let check = str[i];
-    if (check == ' ') NumberOfWords++;
+    if (str[i] == ' ') NumberOfWords++;
   }
-  let LineLastWord = str[str.length - 1];
-  if ( LineLastWord == ' ') NumberOfWords--;
-
+  if ( str[str.length - 1] == ' ') NumberOfWords--;
   if (str.length == 0) NumberOfWords= 0;
   else if (str[0] != ' ') NumberOfWords++;
   return NumberOfWords;
